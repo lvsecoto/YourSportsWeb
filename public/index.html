@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>YourSports</title>
+    <script src="http://cdn.static.runoob.com/libs/jquery/2.0.0/jquery.min.js"></script>
+    <script>
+        var updataCounter = function () {
+            $.get("situp", function (data) {
+                $('#counter').text(data.count);
+            });
+        };
+
+        $(document).ready(function () {
+            updataCounter();
+            setInterval(updataCounter, 500);
+        })
+    </script>
+</head>
+
+<body>
+    <div style="margin : auto; left : 0; top : 0; right : 0; bottom : 0">
+        <p style="text-align: center">Situps</p>
+        <p id="counter" style="text-align: center"></p>
+    </div>
+</body>
+
+</html>
