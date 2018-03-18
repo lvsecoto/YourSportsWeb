@@ -6,7 +6,7 @@ var situpCounter = 0;
 router.get('/', function(req, res, next) {
   res.json(
     {
-      'count': situpCounter.toString()
+      'count': situpCounter
     }
   );
 });
